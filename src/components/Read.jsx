@@ -19,7 +19,7 @@ const Read = (props) => {
   return (
     <div className="h-full w-[50%]">
       <h1 className="text-7xl mb-10"><span className="text-red-400">Pending</span> Todos</h1>
-      <ul className="border rounded-lg h-[80%] w-full p-2">{renderTodos}</ul>
+      <ul className="border rounded-lg h-[80%] w-full p-2 overflow-y-auto">{renderTodos}</ul>
     </div>
   );
 };
