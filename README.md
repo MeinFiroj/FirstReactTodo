@@ -1,12 +1,46 @@
-# React + Vite
+# 📝 React Todo App by Firoj
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Hi! I'm Firoj, and this is my **very first React project** – a simple yet clean **Todo App** built using **React** and **Tailwind CSS**.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
 
-## Expanding the ESLint configuration
+✨ Minimal and eye-catching UI  
+🟢 Mark tasks as important  
+❌ Delete tasks you no longer need  
+➕ Add your own custom tasks  
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🎨 Tech Stack
+
+- ⚛️ React (my first time using it in a real project!)
+- 💨 Tailwind CSS for styling
+- 💻 Vite (for fast and modern dev environment)
+
+---
+
+## 📸 Preview
+
+> _(Insert a screenshot or screen recording here if you want — or leave blank for now)_
+
+---
+
+## 🤔 Why I Built This
+
+I know this project is very basic and may not be super useful — but I wanted to **put myself out there**, show what I’ve learned, and be proud of taking my first step into React development. 🙌
+
+Sharing this small project helps me track my progress and hopefully motivates others who are just getting started.
+
+---
+
+## 📦 Getting Started
+
+Want to check it out locally? Here’s how:
+
+```bash
+git clone https://github.com/yourusername/react-todo-app.git
+cd react-todo-app
+npm install
+npm run dev
