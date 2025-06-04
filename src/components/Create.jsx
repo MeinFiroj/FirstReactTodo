@@ -1,5 +1,6 @@
 import { nanoid } from "nanoid";
 import { useForm } from "react-hook-form";
+import { toast } from "react-toastify";
 
 const Create = (props) => {
   const alltodos = props.alltodos;
@@ -15,6 +16,7 @@ const Create = (props) => {
   const submitHandler = (data) => {
     data.id = nanoid();
     setalltodos([...alltodos, data]);
+    toast.success('Todo added successfully!')
     reset();
   };
 
@@ -22,20 +24,20 @@ const Create = (props) => {
     <div className="w-[50%]">
       <h1 className="text-7xl mb-10">Create Todos</h1>
       <form
-        className="flex flex-col items-start gap-2"
+        className="flex flex-col items-start"
         onSubmit={handleSubmit(submitHandler)}
       >
         <input
-          {...register("title", { required: "Title can not be empty" })}
           className="text-white border-b-1 w-[70%] p-2 outline-none"
+          {...register("title", { required: "Input field can not be empty" })}
           type="text"
           placeholder="Enter task here.."
         />
-        <small className="text-red-400">{errors?.title?.message}</small>
-        <div className="py-8">
+        { <small className="text-red-400">{errors?.title?.message}</small>}
+        <div className="py-10">
           <input
-            {...register("isImportant")}
             className="scale-170 mx-3 accent-green-500"
+            {...register("isImportant")}
             type="checkbox"
             id="impCheck"
           />
