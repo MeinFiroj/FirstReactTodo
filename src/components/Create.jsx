@@ -1,10 +1,11 @@
 import { nanoid } from "nanoid";
+import { useContext } from "react";
 import { useForm } from "react-hook-form";
 import { toast } from "react-toastify";
+import { todoContext } from "../Wrapper";
 
-const Create = (props) => {
-  const alltodos = props.alltodos;
-  const setalltodos = props.setalltodos;
+const Create = () => {
+  const [alltodos, setalltodos] = useContext(todoContext);
 
   const {
     register,
@@ -16,7 +17,7 @@ const Create = (props) => {
   const submitHandler = (data) => {
     data.id = nanoid();
     setalltodos([...alltodos, data]);
-    toast.success('Todo added successfully!')
+    toast.success("Todo added successfully!");
     reset();
   };
 
@@ -33,7 +34,7 @@ const Create = (props) => {
           type="text"
           placeholder="Enter task here.."
         />
-        { <small className="text-red-400">{errors?.title?.message}</small>}
+        {<small className="text-red-400">{errors?.title?.message}</small>}
         <div className="py-10">
           <input
             className="scale-170 mx-3 accent-green-500"
